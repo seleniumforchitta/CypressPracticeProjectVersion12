@@ -35,6 +35,7 @@ describe('Test Suite - GreenKart Automation', function () {
         //Click on the Cart btn
         cy.get('a.cart-icon').click()
         cy.contains('PROCEED TO CHECKOUT').click({force : true}) //Click with force true 
+        cy.contains('Place Order').should('be.enabled')
         cy.contains('Place Order').click({force : true})
 
 
